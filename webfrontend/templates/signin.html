@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="LoginContainer" align="center">
+    <form style="max-width:300px;" method="post" data-ajax="false">
+        <div style="padding:10px 20px;"
+             data-role="content" data-collapsed="false"
+             data-theme="a"  data-content-theme="a"
+             data-shadow="true"
+             class="ui-corner-all">
+            <h3>Please sign in</h3>
+            {% if error == True %}
+                <h4 style="color:#f22">Error logging in !</h4>
+            {% endif %}
+            <label for="un" class="ui-hidden-accessible">Username:</label>
+            <input type="text" name="username" id="un"
+                   value="" placeholder="username" data-theme="a">
+            <label for="pw" class="ui-hidden-accessible">Password:</label>
+            <input type="password" name="password" id="pw"
+                   value="" placeholder="password" data-theme="a">
+            <button type="submit"
+                    class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

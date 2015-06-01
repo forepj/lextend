@@ -1,0 +1,39 @@
+<div id="header" class="header">
+    <div class ="ui-grid-a">
+        <div class="ui-block-a">
+          <div class="centerBlock">
+               <a href="/"
+                  rel="eternal"
+                  style="font-size:38px; color:#f00000;text-decoration:none;">
+                  Lextend
+               </a>
+          </div>
+        </div>
+        <div class="ui-block-b">
+            <span style="float:right; margin-right:10px">
+                <div class="ui-block-a ui-nodisc-icon">
+                    {% if 'username' in session %}
+                        {% with %}
+                          {% set image="/static/custom_images/settings.png" %}
+                          {% set url=url_for('settings_general') %}
+                          {% include "banner_button.html" %}
+                        {% endwith %}
+                        {% with %}
+                          {% set image="/static/custom_images/logout.png" %}
+                          {% set url=url_for('signout') %}
+                          {% include "banner_button.html" %}
+                        {% endwith %}
+                    {% endif %}
+                    <div class="ui-block-b">
+                        <a href="http://egger-enertech.ch"
+                           rel="external"
+                           class="">
+                        <img style="vertical-align:middle;margin-left:10px"
+                             src="/static/custom_images/logo.png">
+                        </a>
+                    </div>
+                </div>
+            </span>
+        </div>
+    </div>
+</div>

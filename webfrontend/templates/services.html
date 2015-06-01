@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div>
+
+    <div class="left-pannel">
+        <span>
+            <strong>Thanks for using Lextend, a universal UDP-Gateway.</strong>
+            <p>For questions and support, feel free to contact us:</br></br>
+            Egger Enertech AG</br>
+            +41 33 972 54 54</br>
+            lextend@egger-enertech.ch</br></br>
+
+            Please select the App you want to configure on the right side.
+            </p>
+        </span>
+    </div>
+
+    <div class="right-content">
+        {% with %}
+          {% set label="General settings" %}
+          {% set image="/static/custom_images/2.png" %}
+          {% set url="/settings/general" %}
+          {% include "service_button.html" %}
+        {% endwith %}
+
+        {% with %}
+          {% set label="SONOS Doorbell" %}
+          {% set image="/static/custom_images/1.png" %}
+          {% set url="/settings/sonos_doorbell" %}
+          {% include "service_button.html" %}
+        {% endwith %}
+    </div>
+</div>
+
+{% endblock %}

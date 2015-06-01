@@ -1,0 +1,95 @@
+body {
+  line-height: 1;
+  color: #bbb;
+  background:#000;
+}
+html
+{
+  /*background: #000;*/
+  /*font: normal normal 400 18px Arial,Verdana,Sans-Serif;*/
+}
+
+.ui-listview>li h1, .ui-listview>li h2, .ui-listview>li h3, .ui-listview>li h4, .ui-listview>li h5, .ui-listview>li h6
+{
+  margin:0;
+}
+
+.header
+{
+  background-color: #f0eb5d;
+  height: 65px;
+  line-height: 65px;
+  margin: 20px 0 15px;
+  box-shadow: 1px 3px 2px 0px rgba(50, 50, 50, 0.7);
+}
+
+.header .centerBlock, .header #headerPopups {
+  width: 1023px;
+  font-size: 24px;
+  text-align: left;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #333;
+  margin: 0 0 0 10px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: table;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  height: 100%;
+}
+
+/* Columns */
+.column {
+  height: 100%;
+  text-align: left;
+  vertical-align: middle;
+}
+.right {
+  height: 100%;
+  width: auto;
+  display:table-cell;
+}
+.left {
+  display:table-cell;
+  width: 70px;
+  height: 100%;
+}
+
+.left-pannel {
+  margin: 0px 16px 0px 0px;
+  padding: 10px 10px 10px 10px;
+  background:#ececec;
+  border-radius: 8px;
+  width:300px;
+  float:left;
+}
+.right-content {
+  margin: 0px;
+  padding: 20px 10px 10px 20px;
+  background:#ececec;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.filter-drop-shadow, .left-pannel, .right-content {
+  -webkit-filter : drop-shadow(2px 2px 2px rgba(0,0,0,.8));
+  -moz-filter    : drop-shadow(2px 2px 2px rgba(0,0,0,.8));
+  -ms-filter     : drop-shadow(2px 2px 2px rgba(0,0,0,.8));
+  -o-filter      : drop-shadow(2px 2px 2px rgba(0,0,0,.8));
+  filter         : drop-shadow(2px 2px 2px rgba(0,0,0,.8));
+}
+
+.filter-drop-shadow:hover, filter-drop-shadow:active {
+  -webkit-filter : drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+  -moz-filter    : drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+  -ms-filter     : drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+  -o-filter      : drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+  filter         : drop-shadow(2px 2px 1px rgba(0,0,0,.5));
+}

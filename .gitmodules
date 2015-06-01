@@ -1,0 +1,3 @@
+[submodule "sonosdoorbell/SoCo"]
+	path = sonosdoorbell/SoCo
+	url = git://github.com/eggertec/soco

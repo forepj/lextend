@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="#" name="settings_form" id="settings_form" 
+      method="post" enctype="multipart/form-data" data-ajax="false">
+
+    {% if require_reboot %}
+      <div>
+        <strong>
+          <span style="color:#ff2000;">
+            Settings have been changed. Lextend will reboot now.
+            </br>
+            This may take some minutes.
+          </span>
+        </strong>
+      </div>
+    {% endif %}
+    <ul data-role="listview" data-inset="true">
+        <li class="ui-field-contain">
+            <div data-role="collapsible" data-collapsed="false">
+                <h4>Lextend</h4>
+                <ul data-role="listview">
+                    <li class="ui-field-contain">
+                        <label for="1" class="select">IP</label>
+                            <input type="text" id="1" name="lextend.ip"
+                                   value="{{cfg.general.lextend.ip}}"/>
+                        <label for="1" class="select">Port</label>
+                            <input type="text" id="1" name="lextend.port"
+                                   value="{{cfg.general.lextend.port}}"/>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="ui-field-contain">
+            <div data-role="collapsible" data-collapsed="false">
+                <h4>Miniserver</h4>
+                <ul data-role="listview">
+                    <li class="ui-field-contain">
+                        <label for="1" class="select">IP</label>
+                            <input type="text" id="1" name="miniserver.ip"
+                                   value="{{cfg.general.miniserver.ip}}"/>
+                        <label for="1" class="select">Port</label>
+                            <input type="text" id="1" name="miniserver.port"
+                                   value="{{cfg.general.miniserver.port}}"/>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="ui-body ui-body-b">
+            <fieldset class="ui-grid-b">
+                <div class="ui-block-a">
+                    <a href="#confirmResetDialog" data-rel="popup"
+                       data-position-to="window" data-transition="pop"
+                       class="ui-btn ui-corner-all ui-shadow ui-btn-a"
+                       >Reset ...</a>
+                </div>
+                <div class="ui-block-b">
+                    <input type="button"
+                           name="action" value="Cancel" data-theme="a"
+                           onClick="location.reload();">
+                </div>
+                <div class="ui-block-c">
+                    <input type="submit"
+                           name="action" value="Save" data-theme="a">
+                </div>
+            </fieldset>
+        </li>
+    </ul>
+
+    <div data-role="popup"
+         id="confirmResetDialog"
+         data-overlay-theme="b" data-theme="b"
+         data-dismissible="false" style="max-width:400px;">
+        <div data-role="header" data-theme="a">
+            <h1>Reset config ?</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <h3 class="ui-title"
+                >Are you sure you want to reset the general settings ?</h3>
+            <a href="#"
+               class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b"
+               data-rel="back">Cancel</a>
+            <input type="button" data-theme="b" data-inline="true" value="Reset"
+                   onClick="var hi=document.createElement('input');
+                            hi.type='hidden';
+                            hi.name='action'; hi.value='Reset';
+                            settings_form.appendChild(hi);
+                            settings_form.submit();">
+        </div>
+    </div>
+</form>
+
+{% endblock %}
