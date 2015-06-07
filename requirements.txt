@@ -1,0 +1,11 @@
+Flask == 0.10.1
+pytest == 2.7.1
+requests == 2.7.0
+setuptools == 17.0
+Werkzeug == 0.9.6
+lxml == 3.4.4
+mock == 1.0.1
+netifaces == 0.10.4
+pam == 0.1.4
+pyinotify == 0.9.6
+rpyc == 3.3.0
