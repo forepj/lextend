@@ -1,0 +1,12 @@
+Protocol definition
+-----------------------
++-----------------------------------------------------------------------------------------------------+
+¦ Extension Feature ¦ FeatureNr ¦ Type ¦ SubDev ¦ Function ¦ Args  ¦        ¦                         ¦
+¦-------------------+-----------+------+--------+----------+-------+--------+-------------------------¦
+¦ sonosGateway      ¦ 10        ¦ !    ¦ x      ¦ 1        ¦ sound ¦ volume ¦ sound=1...9, volume=1…9 ¦
++-----------------------------------------------------------------------------------------------------+
+
+Function1: SPS sends a packet to lexsms, SPS sends an SMS with lexsms
+
+Example for Function 1:
+10!x115
