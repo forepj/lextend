@@ -13,6 +13,10 @@ All the features of lextend can be controlled by a web interface and the setting
 * Make sure you are in a python2 environment.
 * Install dependencies using: pip install -r requirements.txt
 
+## UDP Protocol definition
+
+See protocol.txt
+
 ## Usage
 
 You can run lextend by just executing run_lextend_engine.py.
